@@ -73,8 +73,7 @@
                 {% endif %}
                 <div class="site-content">
                 {% if is_home or is_tag %}
-                    {% if is_tag %}
-                    <h2 class="tag-header">Showing all posts tagged {{ tag }}:</h2>
+                    {% if is_tag %}Mostrando todos los post con la etiqueta {{ tag }}:</h2>
                     {% endif %}
 
                     {% if posts %}
@@ -87,7 +86,7 @@
                                 </h2>
                                 <div class="post-metadata">
                                     <div class="left">
-                                        <p class="post-byline">Posted by {{ site.author }} on <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time></p>
+                                        <p class="post-byline">Autor {{ site.author }} on <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time></p>
                                     </div>
                                     <div class="right">
                                         {% if post.tags %}
@@ -111,7 +110,7 @@
                     </section>
                     {% else %}
                     <div class="blog-feed">
-                        <h2 class="title"><em>No posts yet :(</em></h2>
+                        <h2 class="title"><em>No hay publicaciones todavía :(</em></h2>
                     </div>
                     {% endif %}
                     {% if not is_tag and posts %}
@@ -132,7 +131,7 @@
                                     <h1 class="post-title">{{ post.title }}</h1>
                                 </div>
                                 <div class="post-metadata">
-                                    <p class="post-byline left">Posted by {{ site.author }} on <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time></p>
+                                    <p class="post-byline left">Autor {{ site.author }} on <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time></p>
                                     {% if post.tags %}
                                     <div class="post-tags right">
                                         Filed under: {{ post.tags|format_tags(humanize=True) }}
@@ -160,9 +159,9 @@
                             })();
                             </script>
                             <noscript>
-                                Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                                Por favor active JavaScript para ver los <a href="http://disqus.com/?ref_noscript">comentarios by Disqus.</a>
                             </noscript>
-                            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                            <a href="http://disqus.com" class="dsq-brlink">comentarios powered by <span class="logo-disqus">Disqus</span></a>
                         </section>
                         {% endif %}
                     </article>
@@ -176,7 +175,7 @@
                                     <h1 class="post-title">{{ link.title }}</h1>
                                 </div>
                                 <div class="post-metadata">
-                                    <p class="post-byline left">Posted by {{ site.author }} on <time datetime="{{ link.created_at }}" class="post-date">{{ link.created_at|date_format }}</time></p>
+                                    <p class="post-byline left">Publicado por {{ site.author }} en <time datetime="{{ link.created_at }}" class="post-date">{{ link.created_at|date_format }}</time></p>
                                     {% if link.tags %}
                                     <div class="post-tags right">
                                         Filed under: {{ link.tags|format_tags(humanize=True) }}
@@ -205,9 +204,9 @@
                             })();
                             </script>
                             <noscript>
-                                Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                                Por favor active JavaScript para ver los <a href="http://disqus.com/?ref_noscript">comentarios powered by Disqus.</a>
                             </noscript>
-                            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                            <a href="http://disqus.com" class="dsq-brlink">comentarios powered by <span class="logo-disqus">Disqus</span></a>
                         </section>
                         {% endif %}
                     </article>
